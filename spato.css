@@ -1,0 +1,174 @@
+@import url(https://use.fontawesome.com/releases/v6.4.2/css/all.css);
+@import url(https://fonts.googleapis.com/css?family=Muli);
+
+
+:root {
+    --primary: #ff6d39;
+    --secundary: #2a2f40;
+    --white: #ffffff;
+}
+.card {
+    display: flex;
+    align-items: center;
+    font-family: "muli";
+}
+.left {
+    content: "";
+    height: 495px;
+    width: 330px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--primary);
+    margin-left: 93px;
+    border-radius: 0% 50% 50% 0%;
+    position: absolute;
+    z-index: 2;
+    & img {
+        position: absolute;
+        margin-left: -50px;
+        margin-top: -50px;
+        width: 440px;
+        transform: rotate(25deg);
+        opacity: 0;
+        transition: opacity .8s ease;
+        &.active {
+            opacity: 1;
+        }
+    }
+}
+.rigth {
+    content: "";
+    height: 495px;
+    width: 550px;
+    background-color: var(--secundary);
+    margin-left:  200px;
+}
+.product-info {
+    position: absolute;
+    margin-left:  245px;
+    height: 394px;
+    width: 305px;
+
+    & .product-name {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 25px 10px 0;
+
+            & h1 {
+            color: var(--primary);
+            font-weight: bold;
+            font-size:  22px;
+            }
+
+            & .action {
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+            gap: 12px;
+                & i {
+                transition: 0.3s all ease;
+                }
+                & i:hover {
+                color: var(--primary);
+                cursor: pointer;
+                }
+            }
+    }
+
+    & .details {
+        margin-top: 84px;
+
+        & h3 {
+            color: #ffffff;
+            font-size:  20px;
+            font-weight: 500;
+        }
+
+        & h2 {
+            color: #ffffff;
+            margin-top: 10px;
+            font-weight: 800;
+            font-size:  29px;
+        }
+        & h4 {
+            display:  inline-block;
+            color: #ffffff;
+            margin-top: 10px;
+            font-weight:  bold;
+            font-size:  20px;
+        }
+        & .discount {
+        color: #ffffff;
+        font-weight: 400px;
+        font-size: 17px;
+        margin-left: 30px;
+        text-decoration: line-through #ea3201;
+        }
+    }
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    & li {
+    color: #ffffff;
+    margin-right: 25px;
+    font-weight: 500px;
+    font-size: 11px;
+    }
+}
+.size{
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    padding: 2px;
+    margin-right:  20px;
+    transition: 0.3s all ease;
+    border-radius:  50%;
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+    background-color: var(--primary);
+    border-radius: 50%;
+    } 
+}
+.color {
+    content: "";
+    width: 13px;
+    height: 13px;
+    background-color: var(--color);
+    border-radius:  50%;
+    transition: 0.3s all ease;
+    border:  2px solid transparent;
+    cursor: pointer;
+
+
+    &:hover,
+    &:active {
+        border: 2px solid #ff6d39;
+    }
+}
+
+.footer {
+    color: #ffffff;
+    margin-top: 20px;
+    margin-right: 50px;
+    font-weight: 500px;
+    font-size: 11px;
+    float: left;
+    transition: 0.3s all ease;
+    cursor: pointer;
+
+    & i:first-child {
+        margin-right: 5px;
+    }
+
+    &:hover {
+        color: #f76b39;
+    }
+}
